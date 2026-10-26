@@ -61,6 +61,12 @@ Cần JDK 17 và Android SDK (mở project bằng Android Studio một lần là
 # -> app/build/outputs/apk/debug/app-debug.apk
 ```
 
+Mỗi lần push, GitHub Actions tự build APK và lưu ở tab **Actions**. Gắn tag dạng `v1.0` rồi push tag là có bản **Release** kèm APK để tải:
+
+```bash
+git tag v1.0 && git push origin v1.0
+```
+
 ## Dùng hằng ngày
 
 - Mũi tên chọn ô, **OK** để mở.
@@ -72,6 +78,7 @@ Cần JDK 17 và Android SDK (mở project bằng Android Studio một lần là
 
 - Hàng phim mới đọc từ API công khai của VTV Go. VTV có thể thay đổi API bất cứ lúc nào; khi đó hàng phim sẽ trống nhưng launcher vẫn hoạt động bình thường.
 - Bấm vào phim mở trực tiếp trong VTV Go cần bản **VTV Go 12.10 trở lên**. Bản cũ hơn sẽ chỉ mở app VTV Go.
+- Nếu để `VI_DO` và `KINH_DO` bằng 0, app gửi địa chỉ IP của box tới [ipwho.is](https://ipwho.is/) một lần để đoán vị trí. Điền toạ độ cố định thì không có bước này.
 
 ## Giấy phép
 

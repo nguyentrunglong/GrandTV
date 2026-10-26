@@ -1,5 +1,19 @@
+# Gradle
 .gradle/
 build/
+.cxx/
+
+# Local SDK / IDE
 local.properties
 .idea/
 *.iml
+.kotlin/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build output and screenshots taken from the box
+*.apk
+*.hprof
+/screen*.png

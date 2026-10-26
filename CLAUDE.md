@@ -13,7 +13,7 @@ GrandTV ("Nhà của bà" on screen) is a tiny Android TV home-screen launcher f
 ./gradlew lint                 # lint is configured with abortOnError false
 ```
 
-To build from the CLI you need an Android SDK, either through `local.properties` (`sdk.dir=...`, which Android Studio creates on first open) or through `ANDROID_HOME`. AGP 8.10 also needs JDK 17+. On this dev machine the default `java` is 8, so prefix builds with `JAVA_HOME=/opt/java/jdk-17.0.12 PATH=/opt/java/jdk-17.0.12/bin:$PATH`. The project has no tests.
+To build from the CLI you need an Android SDK, either through `local.properties` (`sdk.dir=...`, which Android Studio creates on first open) or through `ANDROID_HOME`. AGP 8.10 also needs JDK 17+; if the default `java` is older, point `JAVA_HOME` at a JDK 17 install before running Gradle. The project has no tests. CI (`.github/workflows/build.yml`) builds the debug APK on every push and attaches it to a GitHub Release when a `v*` tag is pushed.
 
 The target box is an Amlogic Android 9 (SDK 28) device with a 1280x720 screen at 213 dpi, which works out to about 960x540 dp. The current layout just fits, so check any UI change against that size: `adb exec-out screencap -p > screen.png`.
 
